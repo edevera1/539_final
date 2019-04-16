@@ -20,10 +20,16 @@
   <body>
     <div class="logo">
     <a href = "index.html">
-        <img class="title" src="images/title.png" alt="Peter Baker">
+        <img class="title" src="images/title.png" alt="Peter Baker"></a>
     </div>
   <header>
     <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="burg" onclick="burger(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div id="nav">
       <nav>
           <ul>
             <li><a class = "active" href = "about.html">About</a></li>
@@ -32,17 +38,38 @@
             <li><a href = "drops.html">Drops</a></li>
           </ul>
       </nav>
+    </div>
   </header>
-  <main id="main">
-  <div id="parent">
+  <main id="all">
+  <div id="headshot">
   <img class="headshot" src="images/headshot.jpg" alt = "Headshot"/>
-
+  </div>
+  <div id="bio"
       <h1>Hello!</h1><br>
       <p>My name is Peter Baker.</p><br>
       <p>I am a painter and a designer. I currently live in Minneapolis, Minnesota and work as the Assistant Scenic Painter at the Children's Theatre Company. I graduated with a BA in Theater Arts from the University of Minnesota in 2012.
       My work has primarily been for theatrical productions, but my interests span all realms of art and design. I work both by hand and digitally for design and rendering. I've also done extensive studies with computer rendering for art, design, and asset creation.
-      All contact information can be found in my CV or by following the contact link above. Feel free to contact me with questions or for more information at any time.</p>
+      All contact information can be found in my CV. Feel free to contact me with questions or for more information at any time.</p>
   </div>
+  <script>
+
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("nav");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+  }
+  function burger(x) {
+    x.classList.toggle("change");
+  }
+
+  </script>
   </main>
 <footer>
     <p> &copy; Peter Baker 2019</p>
