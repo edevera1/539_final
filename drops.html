@@ -30,6 +30,7 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <div id="nav">
         <nav>
             <ul>
                 <li><a href = "about.html">About</a></li>
@@ -39,6 +40,7 @@
                 <li><a href = "gallery.html">Gallery</a></li>
             </ul>
         </nav>
+      </div>
       </header>
       <main id="main">
       <div class="container3">
@@ -87,9 +89,17 @@
         }
       }
 
+      function show(){
+        console.log("working");
+        navbar.style.visibility="visible";
+      }
+
       function burger(x) {
         x.classList.toggle("change");
+        show();
       }
+
+
 
 
       </script>
