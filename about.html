@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Peter Baker</title>
   </head>
   <body>
@@ -49,7 +50,41 @@
       <p>My name is Peter Baker.</p><br>
       <p>I am a painter and a designer. I currently live in Minneapolis, Minnesota and work as the Assistant Scenic Painter at the Children's Theatre Company. I graduated with a BA in Theater Arts from the University of Minnesota in 2012.
       My work has primarily been for theatrical productions, but my interests span all realms of art and design. I work both by hand and digitally for design and rendering. I've also done extensive studies with computer rendering for art, design, and asset creation.
-      All contact information can be found in my CV. Feel free to contact me with questions or for more information at any time.</p>
+      All contact information can be found in my CV. Feel free to contact me with questions or for more information at any time.</p><br>
+
+      <a class="icon" href = "https://www.instagram.com/sirchamomile/?hl=en" aria-label = "Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="icon" href = "https://twitter.com/SirChamomile" aria-label = "Twitter"><i class="fab fa-twitter"></i></a>
+
+      </div>
+      <button class="accordion">CV</button>
+      <div class="panel">
+        <br>
+        <a href="docs/Peter_Baker_CV.pdf" download>Download CV</a>
+        <br>
+        <!-- <iframe class = "resume" lang="en" src="docs/Peter_Baker_CV.pdf" aria-label= "resume"></iframe> -->
+      </div>
+      <button class="accordion">Contact</button>
+      <div class="panel">
+        <div class="contact">
+        <form method="POST" action="https://formspree.io/edevera@umich.edu">
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..."><br>
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..."><br>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email address..."><br>
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
+
+          <input type="submit" value="Click me">
+
+        </form>
+        </div>
+
   </div>
   <script>
 
@@ -69,6 +104,20 @@
     x.classList.toggle("change");
   }
 
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
   </script>
   </main>
 <footer>
