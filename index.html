@@ -17,17 +17,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito">
     <title>Peter Baker</title>
   </head>
-  <body>
+  <body onload=function()>
   <!-- <div class="img-container">
     <a href="index.html">
       <img class="title" src="images/title.png" alt="Peter Baker">
   </div> -->
   <header>
-    <div class="logo">
+    <div class="logo" tabindex="0">
     <a href = "index.html">
         <img class="title" src="images/title.png" alt="Peter Baker"></a>
     </div>
-    <a class="skip-main" href="#main">Skip to main content</a>
+    <a class="skip-main" href="#main" tabindex="0">Skip to main content</a>
     <div class="burg" onclick="burger(this)">
       <div class="bar1"></div>
       <div class="bar2"></div>
@@ -46,9 +46,20 @@
           </ul>
       </nav>
     </div>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content"tabindex="">
+        <button class="close">&times;</button>
+        <h1>Hello!</h1>
+        <p><br>My name is Peter Baker.<br> Welcome to my scenic art portfolio. <br>Click through the tabs to see samples of my work and to learn more about me.</p>
+      </div>
   </header>
+
   <main id="main">
-    <div class="slideshow-container">
+
+
+  <div class="slideshow-container">
 
       <div class="mySlides fade">
         <img src="images/alicepreview.jpg" alt="Drops Preview of Alice."class="slideimg">
@@ -67,18 +78,22 @@
         <div class="text">SET PIECES</div>
 
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" tabindex="0" onkeydown="plusSlides(-1)" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" tabindex="0" onkeydown="plusSlides(1)" onclick="plusSlides(1)">&#10095;</a>
 
       </div>
       <br>
 
       <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" tabindex="0" onkeydown="currentSlide(1)" onclick="currentSlide(1)"></span>
+        <span class="dot" tabindex="0" onkeydown="currentSlide(2)" onclick="currentSlide(2)"></span>
+        <span class="dot" tabindex="0" onkeydown="currentSlide(3)" onclick="currentSlide(3)"></span>
       </div>
-    </div>
+  </div>
+
+
+
+
 
     <script>
     var slideIndex = 1;
@@ -111,6 +126,34 @@
     function burger(x) {
       x.classList.toggle("change");
     }
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    window.onload = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    span.onkeydown = function(){
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
     </script>
 
   </main>
