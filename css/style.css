@@ -166,7 +166,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 /* Modal Content */
-.modal-content {
+.gallerymodal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
