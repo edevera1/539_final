@@ -23,16 +23,21 @@
       <img class="title" src="images/title.png" alt="Peter Baker">
   </div> -->
   <header>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content"tabindex="0">
+        <button class="close">&times;</button>
+        <h1>Hello!</h1>
+        <p><br>My name is Peter Baker.<br> Welcome to my scenic art portfolio. <br>Click through the tabs to see samples of my work and to learn more about me.</p>
+      </div>
+    </div>
     <div class="logo" tabindex="0">
     <a href = "index.html">
         <img class="title" src="images/title.png" alt="Peter Baker"></a>
     </div>
+
     <a class="skip-main" href="#main" tabindex="0">Skip to main content</a>
-    <div class="burg" onclick="burger(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
     <div class="topnav" id="nav">
       <nav>
           <ul>
@@ -46,14 +51,7 @@
           </ul>
       </nav>
     </div>
-    <div id="myModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content"tabindex="">
-        <button class="close">&times;</button>
-        <h1>Hello!</h1>
-        <p><br>My name is Peter Baker.<br> Welcome to my scenic art portfolio. <br>Click through the tabs to see samples of my work and to learn more about me.</p>
-      </div>
   </header>
 
   <main id="main">
@@ -62,7 +60,7 @@
   <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <img src="images/alicepreview.jpg" alt="Drops Preview of Alice."class="slideimg">
+        <img src="images/alicepreview.jpg" alt="Drops Preview of Alice." class="slideimg">
         <div class="text">DROPS</div>
 
       </div>
@@ -74,7 +72,7 @@
       </div>
 
       <div class="mySlides fade">
-        <img src="images/cordpreview.jpg" alt="Set piece preview from Corduroy."class="slideimg">
+        <img src="images/cordpreview.jpg" alt="Set piece preview from Corduroy." class="slideimg">
         <div class="text">SET PIECES</div>
 
       </div>
@@ -89,7 +87,7 @@
         <span class="dot" tabindex="0" onkeydown="currentSlide(2)" onclick="currentSlide(2)"></span>
         <span class="dot" tabindex="0" onkeydown="currentSlide(3)" onclick="currentSlide(3)"></span>
       </div>
-  </div>
+
 
 
 
