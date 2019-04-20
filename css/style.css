@@ -395,6 +395,11 @@ a{
   transition: max-height 0.2s ease-out;
 }
 
+#setpieceCaption{
+  text-align: center;
+  margin: 15px;
+}
+
 @media screen and (min-width: 650px) {
   a {
     font-family: Nunito, Josefin, sans-serif;
@@ -499,10 +504,6 @@ a{
       max-width: 100%;
   }
 
-  #setpieceCaption{
-    text-align: center;
-  }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -540,5 +541,6 @@ a{
   .column {
     margin: 10px;
   }
+
 
 }
